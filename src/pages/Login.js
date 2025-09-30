@@ -43,38 +43,40 @@ const Login = () => {
     }
   };
 
-  return (
-    <div className="form-container">
-      <form className="form" onSubmit={handleSubmit}>
-        <h2>Login</h2>
-        <div className="form-group">
-          <label>Username</label>
-          <input
-            type="text"
-            name="username"
-            value={username}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-        {message && <p className="message">{message}</p>}
-        <p>
-          Don't have an account? <Link to="/register">Register here</Link>
-        </p>
-      </form>
-    </div>
-  );
-};
+// frontend/src/pages/Login.js
+// ... existing code
 
+  return (
+    <div className="form-container">
+      <form className="form login-form" onSubmit={handleSubmit}> {/* Add the login-form class here */}
+        <h2>Login</h2>
+        <div className="form-group">
+          <label>Username</label>
+          <input
+            type="text"
+            name="username"
+            value={username}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+        {message && <p className="message">{message}</p>}
+        <p>
+          Don't have an account? <Link to="/register">Register here</Link>
+        </p>
+      </form>
+    </div>
+  );
+};
 export default Login;
